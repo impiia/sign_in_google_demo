@@ -1,16 +1,36 @@
-# sign_in_google_demo
+**Google Sign-In Flutter Demo**
 
-A new Flutter project.
+This is a simple Flutter application that demonstrates Google Sign-In functionality using the `google_sign_in` package. The app allows users to sign in with their Google account, displaying a welcome message with their name and email upon successful sign-in. It also provides a "Sign out" button to log out of the Google account.
 
-## Getting Started
+### Features
 
-This project is a starting point for a Flutter application.
+- Google Sign-In for both Android and iOS platforms.
+- Display user information (name and email) upon successful sign-in.
+- Sign-out functionality with a corresponding message.
 
-A few resources to get you started if this is your first Flutter project:
+### Prerequisites
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Before running the application, make sure to:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Add your Google Sign-In API credentials:
+   - For Android: Update the `clientId` in the `initGoogleSignIn` method with your Android client ID.
+   - For iOS: Update the `clientId` in the `initGoogleSignIn` method with your iOS client ID.
+
+2. Ensure you have the necessary dependencies by running:
+
+   ```bash
+   flutter pub get
+   ```
+
+### How to Run
+
+To run the application, use the following command:
+
+```bash
+flutter run
+```
+
+
+
+
+Feel free to customize and enhance the application based on your needs!
