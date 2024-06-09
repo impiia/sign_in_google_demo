@@ -28,12 +28,10 @@ class SignInDemoState extends State<SignInDemo> {
   @override
   void initState() {
     super.initState();
-    // Выполните инициализацию GoogleSignIn в методе initState
     initGoogleSignIn();
   }
 
   Future<void> initGoogleSignIn() async {
-    // Инициализация GoogleSignIn в зависимости от платформы
     if (Platform.isAndroid) {
       googleSignIn = GoogleSignIn(scopes: ['email']);
     } else if (Platform.isIOS || Platform.isMacOS) {
@@ -51,11 +49,9 @@ class SignInDemoState extends State<SignInDemo> {
         final GoogleSignInAuthentication googleAuthentication =
             await googleAccount.authentication;
 
-        // Получение имени пользователя и электронной почты
         String userName = googleAccount.displayName ?? "";
         String userEmail = googleAccount.email ?? "";
 
-        // Вывод сообщения
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text('Вы вошли как $userName ($userEmail)'),
@@ -70,7 +66,6 @@ class SignInDemoState extends State<SignInDemo> {
   Future<void> _handleSignOut() async {
     await googleSignIn.signOut();
 
-    // Вывод сообщения после выхода
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text('Вы вышли из аккаунта'),
